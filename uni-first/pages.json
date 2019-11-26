@@ -1,10 +1,26 @@
 {
 	"pages": [{
 			"path": "pages/news/index",
-			"style": {}
+			"style": {
+				 "navigationBarTitleText": "首页",//设置页面标题文字
+				        "enablePullDownRefresh":true//开启下拉刷新
+			}
 		},
 		{
 			"path": "pages/detail/detail",
+			"style": {
+				"app-plus":{
+					"titleNView": false, //去除原生导航栏
+					"buttons":[{ //添加自定义按钮
+						"text":"\ue534",
+						"fontSrc":"/static/uni.ttf",
+						"font-size":"22px"
+					}]
+				}
+			}
+		},
+		{
+			"path": "pages/ucenter/ucenter",
 			"style": {}
 		}
 	],
@@ -19,7 +35,7 @@
 		"list": [
 			{
 				"name": "", //模式名称
-				"path": "pages/news/index", //启动页面，必选
+				"path": "pages/ucenter/ucenter", //启动页面，必选
 				"query": "" //启动参数，在页面的onLoad函数里面得到
 			}
 		]
